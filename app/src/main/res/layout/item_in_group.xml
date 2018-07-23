@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="65dp"
+    android:layout_margin="5dp"
+    android:id="@+id/main_layout"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/image_profile"
+            android:layout_gravity="center"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/remove_from_group"
+            android:layout_height="20dp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Contact Name"
+        android:layout_gravity="center"
+        android:id="@+id/contact_name"
+        android:layout_marginTop="5dp"
+        android:textSize="12dp"
+        android:textColor="#000"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

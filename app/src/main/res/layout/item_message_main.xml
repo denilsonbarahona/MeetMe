@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/Message_structure_layout"
+        android:padding="3dp"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content">
+
+       <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:id="@+id/text_chat_send" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/time_layout"
+            android:orientation="horizontal"
+            android:background="@drawable/round_corner"
+            android:padding="2dp"
+            android:layout_below="@id/text_chat_send"
+            android:layout_alignRight="@id/text_chat_send"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Time_Message_Send"
+                android:text="11:25"
+                android:layout_marginRight="3dp"
+                android:textColor="#FFF"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:id="@+id/StatusMessage_send"
+                android:src="@drawable/ic_done"
+                android:layout_height="15dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:id="@+id/MessageImageStructure"
+        android:layout_height="280dp"
+        android:padding="4dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:id="@+id/RelativeImageBackground"
+            android:layout_height="280dp">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="280dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/ImageMessage" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/play_icon_video"
+                android:background="@drawable/ic_play_circle"
+                android:layout_centerInParent="true"
+                android:layout_height="40dp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/layout_video_play_duration"
+            android:orientation="horizontal"
+            android:background="@drawable/round_corner"
+            android:padding="2dp"
+            android:layout_margin="3dp"
+            android:layout_alignBottom="@id/RelativeImageBackground"
+            android:layout_alignLeft="@id/RelativeImageBackground"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/video_play_duration"
+                android:text="0:25"
+                android:layout_marginRight="3dp"
+                android:textColor="#FFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/time_layout_Image"
+            android:orientation="horizontal"
+            android:background="@drawable/round_corner"
+            android:padding="2dp"
+            android:layout_margin="3dp"
+            android:layout_alignBottom="@id/RelativeImageBackground"
+            android:layout_alignRight="@id/RelativeImageBackground"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Time_Message_Send_Image"
+                android:text="11:25"
+                android:layout_marginRight="3dp"
+                android:textColor="#FFF"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:id="@+id/StatusMessage_send_Image"
+                android:src="@drawable/ic_done"
+                android:layout_height="15dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="250dp"
+            android:id="@+id/Message_Audio_Layout"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:id="@+id/RelativeLayoutAudio"
+                android:layout_gravity="center_vertical"
+                android:layout_height="70dp">
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:id="@+id/play_pause_layout"
+                    android:layout_alignParentLeft="true"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="match_parent">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/seek_bar_layout"
+                    android:layout_toRightOf="@+id/play_pause_layout"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/layout_seek_t"
+                        android:layout_marginBottom="5dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|top"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="10dp"
+                        android:id="@+id/Layout_Run_Time"
+                        android:paddingTop="5dp" >
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/time_layout_Audio"
+                        android:layout_gravity="right|bottom"
+                        android:orientation="horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingRight="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/round_corner"
+                            android:padding="2dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/Time_Message_Send_Audio"
+                                android:text="11:25"
+                                android:layout_marginRight="3dp"
+                                android:textColor="#FFF"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:id="@+id/StatusMessage_send_Audio"
+                                android:src="@drawable/ic_done"
+                                android:layout_height="15dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:id="@+id/Message_Doc_Layout"
+        android:orientation="horizontal"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="250dp"
+            android:layout_height="70dp">
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:id="@+id/icon_doc_layout"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:background="@drawable/circle_draw"
+                    android:src="@drawable/ic_insert"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/Doc_nameFrame"
+                android:layout_toRightOf="@+id/icon_doc_layout"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="top|center_vertical"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/DocumentName"
+                        android:textStyle="bold"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="14dp"
+                        android:fontFamily="sans-serif"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre archivo"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|bottom"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:id="@+id/Layout_size_doc">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/DocumentSize"
+                        android:textStyle="bold"
+                        android:textSize="11dp"
+                        android:fontFamily="sans-serif"
+                        android:layout_height="wrap_content"
+                        android:text="25.455 kb"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time_layout_Doc"
+                    android:layout_gravity="right|bottom"
+                    android:orientation="horizontal"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/round_corner"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Time_Message_Send_Doc"
+                            android:text="11:25"
+                            android:layout_marginRight="3dp"
+                            android:textColor="#FFF"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:id="@+id/StatusMessage_send_Doc"
+                            android:src="@drawable/ic_done"
+                            android:layout_height="15dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

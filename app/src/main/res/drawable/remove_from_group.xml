@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:innerRadius="10dp"
+            android:shape="oval">
+            <solid android:color="@color/remove_from_group"></solid>
+            <stroke android:color="#fff" android:width="2dp"></stroke>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_close"
+        android:top="3sp" android:right="3sp" android:left="3sp" android:bottom="3sp"></item>
+</layer-list>
+

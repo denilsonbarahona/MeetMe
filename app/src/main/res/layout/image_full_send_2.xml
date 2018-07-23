@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Rootview_Message_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#66000000"
+        android:animateLayoutChanges="true"
+        android:theme="@style/ThemeAppBase.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarFullScreen_send"
+            android:background="#00000000"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/arrow_back_full_screen"
+                    android:src="@drawable/ic_backspace"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:id="@+id/TextNameSend_Image"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="normal|bold"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:id="@+id/remove_image"
+                    android:src="@drawable/ic_delete"/>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/MessageText"
+                android:background="#d8000000"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:maxHeight="50dp"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/Add_Emoji_Btn"
+                        android:src="@drawable/smiley"
+                        android:layout_weight="0.07"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        android:id="@+id/text_layout"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.92">
+
+                        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                            android:id="@+id/EmojiEditText_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.81"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="10dp"
+                            android:maxLines="5"
+                            android:imeOptions="actionSend"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:hint="Type Something..."
+                            app:emojiconSize="23sp"
+                            android:textColor="#8c8c8c"
+                            android:textColorHint="#8c8c8c"
+                            android:background="@null"
+                            android:layout_gravity="center"
+                            android:minHeight="50dp"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:padding="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/colored_circle_draw"
+                        android:id="@+id/Attached_element"
+                        android:src="@drawable/ic_send_white"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

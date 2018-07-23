@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:background="#66000000"
+        android:animateLayoutChanges="true"
+        android:id="@+id/bar_layout_full_screen"
+        android:theme="@style/ThemeAppBase.AppBarOverlay"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolbarFullScreen"
+            android:background="#00000000"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:id="@+id/arrow_back_full_screen"
+                android:background="@drawable/ic_backspace"/>
+
+             <ImageView
+                 android:layout_width="35dp"
+                 android:layout_height="35dp"
+                 android:layout_gravity="center"
+                 android:layout_marginRight="15dp"
+                 android:id="@+id/profile_full_screen"/>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_gravity="center"
+                 android:orientation="vertical"
+                 android:layout_height="wrap_content">
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:id="@+id/TextNameSend_Image"
+                     android:layout_height="wrap_content"
+                     android:textColor="#ffffff"
+                     android:textSize="14dp"
+                     android:text="Denilson"
+                     android:textStyle="normal|bold"/>
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:textColor="#ffffff"
+                     android:textSize="14dp"
+                     android:text="1 / 1"
+                     android:textStyle="normal|bold"/>
+
+             </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:id="@+id/ImageFullScreen"/>
+
+         <ImageView
+             android:layout_width="50dp"
+             android:id="@+id/ic_play_icon"
+             android:src="@drawable/ic_play_circle"
+             android:layout_centerInParent="true"
+             android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/linear_layout_full_screen"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="alksjdklajs lja  adlkadklj kljl s  jdajd dalkjdljlkdjaldjaljd   d a d ad a dakdjladakdkañldkñaldkñakdlñkañldk asdlkñ"
+            android:id="@+id/Text_Image_Message"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#fff"></View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="24 Octubre 2016 , 6:24"
+            android:textColor="#acabab"
+            android:id="@+id/Time_Message"/>
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

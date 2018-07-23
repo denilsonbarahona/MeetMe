@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginRight="40sp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/file_attached"
+                android:src="@drawable/ic_insert"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/file_pick"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="11sp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginRight="40sp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/audio_attached"
+                android:src="@drawable/ic_audiotrack_light"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/audio_pick"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="11sp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/gallery_attached"
+                android:src="@drawable/ic_image"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/gallery_pick"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="11sp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

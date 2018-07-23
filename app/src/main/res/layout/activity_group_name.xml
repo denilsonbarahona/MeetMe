@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeAppBase.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/groupName_Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/arrow_back"
+                    android:background="@drawable/ic_backspace"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/Label"
+                    android:text="@string/new_group"
+                    android:textSize="17dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:id="@+id/GroupCreated"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"
+                        android:textStyle="normal|bold"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/StepGroupName"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:clipToPadding="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:elevation="3dp"
+            android:id="@+id/Main_groupName"
+            android:background="#fff"
+            android:layout_height="80dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/add_image"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/add_group_image"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginLeft="15dp"/>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.81"
+                    android:layout_height="match_parent">
+
+                    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:emojiconSize="23sp"
+                        android:padding="3dp"
+                        android:layout_centerInParent="true"
+                        android:hint="@string/GroupName"
+                        android:fontFamily="sans-serif"
+                        android:id="@+id/TextGroupName"
+                        android:textSize="16sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.19"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/Add_Emoji_Btn"
+                        android:src="@drawable/smiley" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textColor="#4b4b4b"
+            android:padding="15dp"
+            android:layout_below="@+id/Main_groupName"
+            android:id="@+id/MembersCount"
+            android:text="Members Count"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="#d5d5d5"
+            android:layout_below="@+id/MembersCount"
+            android:id="@+id/Item_separator"
+            android:layout_height="0.01px"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/Item_separator"
+            android:id="@+id/MembersInGroup"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/rootmain_view"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_barLayout"
+        android:theme="@style/ThemeAppBase.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/setting_Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/arrow_back"
+                    android:background="@drawable/ic_backspace"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/activity_title"
+                    android:text="@string/state_profile"
+                    android:textSize="17dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="normal|bold" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:id="@+id/NameStep"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:layout_centerInParent="true"
+                        android:textColor="#ffffff"
+                        android:src="@drawable/ic_one_done"
+                        android:textStyle="normal|bold"
+                        android:fontFamily="sans-serif"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/namelayout"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_height="wrap_content">
+
+            <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                android:layout_margin="15dp"
+                android:layout_width="0dp"
+                android:hint="Tu estado"
+                android:textStyle="normal"
+                android:maxLength="50"
+                app:emojiconSize="23sp"
+                android:id="@+id/text_name"
+                android:fontFamily="sans-serif"
+                android:textSize="16dp"
+                android:textColorHighlight="@color/colorAccent"
+                android:layout_weight="0.85"
+                android:layout_height="50dp" />
+            <requestFocus></requestFocus>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/Add_Emoji_Btn"
+                    android:src="@drawable/smiley" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_description"
+            android:textColor="#f1686869"
+            android:layout_margin="20dp"
+            android:text=" "
+            android:layout_below="@+id/namelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

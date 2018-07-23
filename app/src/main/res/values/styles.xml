@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="ThemeAppBase" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccentBar</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:itemBackground">#fff</item>
+
+    </style>
+
+    <style name="ThemeAppBaseFullScreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/btn_default_light_pressed</item>
+        <item name="colorPrimaryDark">@color/btn_default_light_pressed</item>
+        <item name="colorAccent">@color/colorAccentBar</item>
+    </style>
+
+    <style name="ThemeAppBaseFullScreen.FullScreenMedia" parent="ThemeAppBaseFullScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="ThemeAppBase.NoActionBar_videofull">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">#000</item>
+
+    </style>
+
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeAppBase.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ThemeAppBase.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="ThemeAppBase.AppBarOverlayLight" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppTheme_FullsCreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/btn_default_light_pressed</item>
+        <item name="colorPrimaryDark">@color/btn_default_light_pressed</item>
+        <item name="colorAccent">@color/btn_default_light_pressed</item>
+    </style>
+
+
+    <style name="AppTheme_FullsCreen.FullScreenMedia" parent="AppTheme_FullsCreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="SelectableItemTheme">
+        <item name="colorControlHighlight">#fff</item>
+    </style>
+
+    <style name="SelectableItemBackground">
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+</resources>

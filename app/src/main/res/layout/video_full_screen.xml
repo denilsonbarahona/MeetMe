@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:id="@+id/Rootview_message_video"
+    android:background="#000">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:background="#66000000"
+        android:animateLayoutChanges="true"
+        android:theme="@style/ThemeAppBase.AppBarOverlay"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolbarFullScreen_send"
+            android:background="#00000000"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/arrow_back_full_screen"
+                    android:src="@drawable/ic_backspace"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:id="@+id/VideoNameSendTxt"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="#ffffff"
+                    android:text="Video"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal|bold"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/MessageText"
+                android:id="@+id/video_full"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/MessageText"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:maxHeight="50dp"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/Add_Emoji_Btn"
+                            android:src="@drawable/smiley"
+                            android:layout_weight="0.07"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="50dp"
+                            android:id="@+id/text_layout"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.92">
+
+
+                            <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                                android:layout_width="0dp"
+                                android:layout_weight="0.92"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="10dp"
+                                android:maxLines="5"
+                                android:imeOptions="actionSend"
+                                android:inputType="textCapSentences|textMultiLine"
+                                android:hint="Type something ..."
+                                app:emojiconSize="23sp"
+                                android:background="@null"
+                                android:layout_gravity="center"
+                                android:minHeight="50dp"
+                                android:textColor="#8c8c8c"
+                                android:textColorHint="#8c8c8c"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:id="@+id/txt_message_video"
+                                android:textSize="16sp">
+                                <requestFocus></requestFocus>
+                            </hani.momanii.supernova_emoji_library.Helper.EmojiconEditText>
+
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:padding="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/colored_circle_draw"
+                            android:id="@+id/Attached_element"
+                            android:src="@drawable/ic_send_white"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

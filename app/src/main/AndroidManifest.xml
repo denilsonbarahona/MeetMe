@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.curso.onmessage">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ThemeAppBase.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MessageActitvity.MessageMain"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ImageFullscreen.ImageFullScreen_Main"
+            android:theme="@style/AppTheme_FullsCreen.FullScreenMedia" />
+        <activity
+            android:name=".PickActivity.FilePickActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PickActivity.MultimediaPickActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PickActivity.imageview_in_folder_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ImageFullscreen.ImageFullScreenSend"
+            android:theme="@style/ThemeAppBaseFullScreen.FullScreenMedia" />
+        <activity
+            android:name=".PickActivity.video_in_folder_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ImageFullscreen.VideoFullSceenSend"
+            android:theme="@style/ThemeAppBaseFullScreen.FullScreenMedia" />
+        <activity
+            android:name=".SettingActivity.SettingActity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GroupActivity.GroupActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GroupActivity.GroupNameActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ImageFullscreen.ImageSendFull"
+            android:theme="@style/ThemeAppBaseFullScreen.FullScreenMedia" />
+        <activity
+            android:name=".GroupActivity.SearchImageGroupProfile"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingActivity.SettingProfile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingActivity.ProfileNameActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingActivity.SettingState"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingActivity.SettingChangeNumber"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingActivity.ProfileNewNumber"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>
